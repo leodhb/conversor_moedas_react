@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+
 
 import './MainComponent.css';
 import Conversor from './Conversor';
 import CurrencySelector from './CurrencySelector';
+
+
+
 
 export default class MainComponent extends Component {
   constructor(props) {
@@ -12,6 +19,8 @@ export default class MainComponent extends Component {
         moedaB: 'BRL'
     };
   }
+
+  
 
   changeValueA = moedaA => {
     this.setState({
@@ -26,12 +35,15 @@ export default class MainComponent extends Component {
   };
 
   
+  
   render() {
+    
     return (
+      
     <div className="App">
-      <div className="container d-flex h-100">
-        <div className="row justify-content-center align-items-center h-100 mt-4">
-          <div className="col-lg-6 card-conversor">
+      <Container maxWidth="sm">
+        <Paper style={{padding: 40,textAlign: 'center', marginTop: 100}}>
+
             <div className="row justify-content-center">
               <h1 className="mb-4">CONVERSOR DE MOEDAS</h1>
               <div className="col-lg-5">
@@ -45,9 +57,8 @@ export default class MainComponent extends Component {
               </div>
             </div>
               <Conversor moedaA={this.state.moedaA} moedaB={this.state.moedaB}></Conversor>
-          </div>
-        </div>
-      </div>
+         </Paper>
+      </Container>
     </div>
     );
   }

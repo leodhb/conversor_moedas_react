@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 export default class Conversor extends Component {
   constructor(props) {
@@ -49,12 +51,8 @@ export default class Conversor extends Component {
     return (
       <div className="conversor text-center mt-4">
           <h2>{this.props.moedaA} para {this.props.moedaB}</h2>
-          <div className="input-group">
-            <input placeholder="Ex: 3.25, 120.50..." type="text" className="form-control" onChange={(event) => {this.setState({moedaA_valor:event.target.value})}}></input>
-            <span className="input-group-btn">
-               <input type="button" className="btn btn-primary" value="Converter" onClick={this.converter}></input>
-            </span>
-          </div>
+          <TextField style={{marginRight: 30}} placeholder="Ex: 3.25, 120.50..." id="standard-basic" onChange={(event) => {this.setState({moedaA_valor: event.target.value})}}></TextField>
+          <Button variant="contained" color="primary" onClick={this.converter}>Converter</Button>
           <h2 className="mt-3">{this.state.txt_convertido}</h2>
       </div>
     );

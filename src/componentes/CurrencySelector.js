@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Select from '@material-ui/core/Select';
 
 export default class CurrencySelector extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class CurrencySelector extends Component {
 
   render() {
     return (
-        <select className="form-control" name="currency" value={this.props.valor} id={this.props.idx} onChange={this.handleChange}>
+        <Select  name="currency" value={this.props.valor} id={this.props.idx} onChange={this.handleChange}>
             <option value="AFA">Afghan Afghani</option>
             <option value="ALL">Albanian Lek</option>
             <option value="DZD">Algerian Dinar</option>
@@ -185,7 +186,7 @@ export default class CurrencySelector extends Component {
             <option value="VND">Vietnamese Dong</option>
             <option value="YER">Yemeni Rial</option>
             <option value="ZMK">Zambian Kwacha</option>
-    </select>
+    </Select>
     );
   }
 }
