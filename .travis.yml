@@ -11,7 +11,7 @@ language: node_js
  deploy:
  provider: pages
  skip_cleanup: true
- github_token: 17d9ed08f399ec671f345732415fcc31d2f3928c
+ github_token: $GITHUB_TOKEN
  local_dir: build
  on:
    branch: master
