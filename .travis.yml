@@ -7,6 +7,7 @@ cache:
 script:
   - npm run build || true
   - npm test
+  - gh-pages -d build
 deploy:
   provider: pages
   skip_cleanup: true
