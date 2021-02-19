@@ -45,7 +45,7 @@ export default class MainComponent extends Component {
         <Paper style={{padding: 40,textAlign: 'center', marginTop: 100}}>
 
             <div className="row justify-content-center">
-              <h1 className="mb-4">CONVERSOR DE MOEDAS</h1>
+              <h1 className="mb-4 text-center">CONVERSOR DE MOEDAS MAIS DAORA DO PLANETA TERRA</h1>
               <div className="col-lg-5">
                 <CurrencySelector getChildSelect={this.changeValueA} idx='select_A' valor={this.state.moedaA} onClick={this.changeA}></CurrencySelector>
               </div>
