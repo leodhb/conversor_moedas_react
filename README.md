@@ -1,4 +1,5 @@
 # Conversor de moedas simples em React JS
+[![Build Status](https://travis-ci.org/leodhb/conversor_moedas_react.svg?branch=main)](https://travis-ci.org/leodhb/conversor_moedas_react)
 
 Projeto escrito usando a API da [exchangeratesapi.io](https://exchangeratesapi.io).
 
